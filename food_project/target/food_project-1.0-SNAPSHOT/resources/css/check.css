@@ -1,0 +1,87 @@
+/* General Reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, table, td, th, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Styling */
+h:form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h:commandButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+h:commandButton:hover {
+    background-color: #0056b3;
+}
+
+/* Data Table Styling */
+.data-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Header Row Styling */
+.data-container th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Data Row Styling */
+.data-container td {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.data-container td:nth-child(odd) {
+    background-color: #eef2f7;
+}
+
+/* Hover Effect for Rows */
+.data-container tr:hover {
+    background-color: #dfe9f3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .data-container {
+        font-size: 14px;
+    }
+    h:commandButton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

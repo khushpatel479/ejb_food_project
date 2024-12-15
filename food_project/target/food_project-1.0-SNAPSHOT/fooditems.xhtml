@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="resources/css/view_menu.css"/>
+    </h:head>
+    <h:body>
+       
+       
+        <h:outputLabel value="#{sessionScope.userEmail}"/>
+        <div class="app">
+            <div class='navbar' style="text-decoration: none;">
+                <img src="resources/images/logo.png" class='logo'/>
+        <ul class='navbar-menu'>
+            <a href="index.jsp"><li>Home</li></a>
+            <a href="view_menu.jsp"> <li>Menu</li></a>
+            <a href="#"><li>Mobile-App</li></a>
+            <a href="#"><li>Contact Us</li></a>
+            
+
+        </ul>
+               
+            <div class='navbar-right'>
+                <img class='sr' src="resources/images/search.png"/> 
+            <div class='search-icon' >
+                <a href="cart.xhtml"><img class='cr' src="resources/images/cart.png"/></a>
+            <div class='dot'></div>
+            </div>
+                <a href="signup.xhtml"><button>sign in</button></a>
+        </div>
+      </div>
+            <h:form>
+              <div class="cointaner">
+          
+                      <div class="card">
+                          <img src="resources/Data_image/11.jpg"/>
+                      <div class="intro">
+                          <h1>PRODUCT 1</h1>
+                          <p>lore's</p>
+            <h:commandButton value="ADD TO CART" class="btn" action="#{op.ins()}">
+                <f:setPropertyActionListener target="#{op.name}" value="coffee" />
+                <f:setPropertyActionListener target="#{op.email}" value="#{sessionScope.userEmail}" />
+                <f:setPropertyActionListener target="#{op.price}" value="190" />
+                <f:setPropertyActionListener target="#{op.img}" value="11.jpg" />
+
+            </h:commandButton>
+               </div>
+                      </div>
+                         <!--2-->          
+                         <div class="card">
+                             <img src="resources/Data_image/salad.jpg"/>
+                      <div class="intro">
+                          <h1>PRODUCT 2</h1>
+                          <p>lore's</p>
+            <h:commandButton value="ADD TO CART" class="btn" action="#{op.ins()}">
+                <f:setPropertyActionListener target="#{op.name}" value="salad" />
+                <f:setPropertyActionListener target="#{op.email}" value="#{sessionScope.userEmail}" />
+                <f:setPropertyActionListener target="#{op.price}" value="200" />
+                <f:setPropertyActionListener target="#{op.img}" value="salad.jpg" />
+
+            </h:commandButton>
+               </div>
+                      </div>
+                         <!--3-->
+                         <div class="card">
+                      <img src="resources/Data_image/4.png"/>
+                      <div class="intro">
+                          <h1>PRODUCT 1</h1>
+                          <p>lore's</p>
+            <h:commandButton value="ADD TO CART" class="btn" action="#{op.ins()}">
+                <f:setPropertyActionListener target="#{op.name}" value="PRODUCT1" />
+                <f:setPropertyActionListener target="#{op.email}" value="#{sessionScope.userEmail}" />
+                <f:setPropertyActionListener target="#{op.price}" value="1900" />
+                <f:setPropertyActionListener target="#{op.img}" value="4.png" />
+
+            </h:commandButton>
+               </div>
+                      </div>
+                         <!--4-->
+                         <div class="card">
+                      <img src="resources/Data_image/4.png"/>
+                      <div class="intro">
+                          <h1>PRODUCT 1</h1>
+                          <p>lore's</p>
+            <h:commandButton value="ADD TO CART" class="btn" action="#{op.ins()}">
+                <f:setPropertyActionListener target="#{op.name}" value="PRODUCT1" />
+                <f:setPropertyActionListener target="#{op.email}" value="#{sessionScope.userEmail}" />
+                <f:setPropertyActionListener target="#{op.price}" value="1900" />
+                <f:setPropertyActionListener target="#{op.img}" value="4.png" />
+
+            </h:commandButton>
+               </div>
+                      </div>
+                         <!--5-->
+                         <div class="card">
+                      <img src="resources/Data_image/4.png"/>
+                      <div class="intro">
+                          <h1>PRODUCT 1</h1>
+                          <p>lore's</p>
+            <h:commandButton value="ADD TO CART" class="btn" action="#{op.ins()}">
+                <f:setPropertyActionListener target="#{op.name}" value="PRODUCT1" />
+                <f:setPropertyActionListener target="#{op.email}" value="#{sessionScope.userEmail}" />
+                <f:setPropertyActionListener target="#{op.price}" value="1900" />
+                <f:setPropertyActionListener target="#{op.img}" value="4.png" />
+
+            </h:commandButton>
+               </div>
+                      </div>
+            </div>
+            </h:form>
+             </div>
+    </h:body>
+</html>

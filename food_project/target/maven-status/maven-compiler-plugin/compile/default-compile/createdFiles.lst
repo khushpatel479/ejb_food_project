@@ -1,0 +1,14 @@
+beans\signup.class
+entity\Cart.class
+entity\FoodItems.class
+ejb\bean_1Local.class
+beans\check.class
+ejb\bean_1.class
+entity\PlaceOrder.class
+beans\calls.class
+beans\cart.class
+entity\ExploreItem.class
+entity\Signup.class
+com\mycompany\food_project\resources\JakartaEE8Resource.class
+beans\login.class
+entity\DeleveredOrders.class

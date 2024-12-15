@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="resources/css/cart.css"/>
+    </h:head>
+    <h:body>
+        <div class="app">
+             <div class='navbar'>
+                 <a href="index1.xhtml">  <img src="resources/images/logo.png" class='logo'/></a>
+        <ul class='navbar-menu'>
+            <a href="index1.xhtml"> <li>Home</li></a>
+            <a href="fooditems.xhtml"> <li>Menu</li></a>
+            <a href="login.xhtml"><li>Login</li></a>
+            <h:panelGroup rendered="#{empty sessionScope.userMail}">
+            <a href="bill.xhtml"><li>View Order</li></a>
+            </h:panelGroup>
+
+        </ul>
+                  
+                 </div>
+            <hr/>
+            <h:form>
+                        <h:commandButton value="DISPLAY-CART" action="#{cp.getcart()}"/>
+                    </h:form>   
+            <div class="cart">
+                <div class='cart-items'>
+      <div class='cart-items-title'>
+        <p>Image</p>
+        <p>Name of Product</p>
+        <p>Price</p>
+        <p>Remove</p>
+     
+      </div>
+                      
+                    
+                    <h:dataTable styleClass="cart-items-title cart-items-item" value="#{cp.vb}" var="p">
+                        <h:column>
+                            <h:graphicImage styleClass="cimg" value="/resources/Data_image/#{p.img}" alt="img1"/>
+                        </h:column>
+                        <h:column>#{p.name}</h:column>
+                        <h:column>#{p.price}</h:column>
+                        <h:column>
+                        <h:form>
+                            <h:commandLink value="X" action="#{cp.del()}" >
+                                <f:setPropertyActionListener target="#{cp.curr}" value="#{p}"/>
+                        </h:commandLink>
+                        </h:form>
+                        </h:column>
+
+                    </h:dataTable>
+                 <hr/>  
+               
+    </div>
+    <div class='cart-bottom'>
+    <div class='cart-total'>
+    <h2>cart-total</h2>
+
+<div>
+  <div class='cart-total-details'>
+    <p>sub-total</p>
+    <h:form>
+        <h:commandButton action="#{cp.gettot()}" value="GET-TOTAL"/> : 
+        <h:outputLabel styleClass="kl" value="#{cp.tot}"/>
+    </h:form>
+  </div>
+  <hr/>
+
+  <hr/>
+ 
+</div>
+
+    <a href="check.xhtml"><button>Check out</button></a>
+
+    </div>
+
+    </div>   
+             </div>
+            </div>
+        
+    </h:body>
+</html>

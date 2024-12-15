@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="resources/css/index.css"/>
+    </h:head>
+    <h:body>
+        <div class="app">
+              <div class='navbar'>
+                  <img src="resources/images/logo.png" class='logo'/>
+        <ul class='navbar-menu'>
+            <li>Home</li>
+            <a href="fooditems.xhtml"> <li>Menu</li></a>
+            <li>Mobile-App</li>
+            <li>Contact Us</li>
+            
+
+        </ul>
+        <div class='navbar-right'>
+            <img class='sr' src="resources/images/search.png"/> 
+            <div class='search-icon' >
+                <a href="cart.xhtml"><img class='cr' src="resources/images/cart.png"/></a>
+           
+            </div>
+            <h:panelGroup rendered="#{empty sessionScope.userEmail}">
+            <a href="signup.xhtml">  <button>sign in</button></a>
+            </h:panelGroup>
+        </div>
+      </div>
+              <div class='Header'>
+                  <img src="./resources/images/img1.jpg" class="Header"/>
+      <div class='Header-contents'>
+        <h2>order your favorite food here </h2>
+        <p>Choose from a diverse menu featuring a delectable array of dishes crafted with finest ingridents</p>
+        <a href="fooditems.xhtml"><button>view menu</button></a>
+      </div>
+    </div>
+            
+            <div class="exploremenu" id='exploremenu'>
+             <h1>Explore Menu</h1>
+<p class='exploremenutext'>Choose from a diverse menu featuring a delectable array of dishes.</p>
+
+              
+
+                 <div class='explore-menu-list'>
+   
+                 <div class="explore-menu-list-item">
+                     <img  src="./resources/Data_image/11.jpg"/>
+                    
+                 </div>
+   <div class="explore-menu-list-item">
+                     <img  src="./resources/Data_image/11.jpg"/>
+                    
+                 </div>
+                      <div class="explore-menu-list-item">
+                     <img  src="./resources/Data_image/11.jpg"/>
+                    
+                 </div>
+                      <div class="explore-menu-list-item">
+                     <img  src="./resources/Data_image/11.jpg"/>
+                    
+                 </div>
+                      <div class="explore-menu-list-item">
+                     <img  src="./resources/Data_image/11.jpg"/>
+                    
+                 </div>
+                      <div class="explore-menu-list-item">
+                     <img  src="./resources/Data_image/11.jpg"/>
+                    
+                 </div>
+                     
+    
+              
+           
+                 </div>
+             
+             
+                 </div>
+             
+        </div>
+    </h:body>
+</html>

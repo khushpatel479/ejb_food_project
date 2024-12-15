@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="resources/css/place.css" />
+    </h:head>
+    <h:body>
+           <div class="app">
+            <h:form class="place-order">
+                <div class="place-order-left">
+                    <p class="title">Delivery Information</p>
+                    <div class="multi-fields">
+                       <h:inputText  value="NAME" disabled="true"/>
+                        
+                        <h:inputText id="fname" value="#{sm.curr.name}"/>
+                    </div>
+                    <h:inputText  disabled="true" value="EMAIL"/>
+                 
+                    <h:inputText id="email" value="#{sm.curr.email}" />
+
+                    <div class="multi-fields">
+                       <h:inputText  value="ADDRESS" disabled="true"/>
+                      
+                        <h:inputText id="city" value="#{sm.curr.address}" />
+                    </div>
+                    <div class="multi-fields">
+                        <h:inputText  value="ZIP-CODE" disabled="true"/>
+                        
+                        <h:inputText id="zipcode" value="#{sm.curr.zipcode}"/>
+                    </div>
+                    <h:inputText  value="PHONE" disabled="true"/>
+                    <h:inputText id="phone" value="#{sm.phone}" />
+                    
+                    
+                </div>
+                <div class="place-order-right">
+                    <div class="cart-total">
+                        <h2>Cart Total</h2>
+                        <div>
+                            <div class="cart-total-details">
+                                <p>Sub-total</p>
+                                
+                                <h:outputLabel value="#{sessionScope.tot}"/>
+                            </div>
+                            <hr/>
+                        </div>
+                        <h:commandButton value="Place Order" action="#{sm.addpl()}" style="background-color: tomato; color: white" />
+                    </div>
+                </div>
+
+            </h:form>
+                               <h:dataTable value="#{sm.pm}" var="o">
+                                   <h:column>YOUR ORDER ID IS :
+                                   </h:column>
+                                       <h:column>#{o.orderId}</h:column>
+                    
+                </h:dataTable>
+        </div>
+    </h:body>
+</html>
